@@ -1,0 +1,26 @@
+
+ RUN  v5.1.0 C:/Users/User/Desktop/ITStep/axios
+      Coverage enabled with v8
+
+(node:3292) Warning: Setting the NODE_TLS_REJECT_UNAUTHORIZED environment variable to '0' makes TLS connections and HTTPS requests insecure by disabling certificate verification.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+ Test Files  77 passed (77)
+      Tests  1800 passed (1800)
+   Start at  15:09:22
+   Duration  69.35s (tests 84%, import 11%, transform 4%, worker 2%)
+
+ % Coverage report from v8
+-------------|---------|----------|---------|---------|-------------------
+File         | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
+-------------|---------|----------|---------|---------|-------------------
+All files    |     100 |    94.44 |     100 |     100 |                   
+ buildURL.js |     100 |    94.44 |     100 |     100 | 59                
+-------------|---------|----------|---------|---------|-------------------
+
+=============================== Coverage summary ===============================
+Statements   : 100% ( 16/16 )
+Branches     : 94.44% ( 17/18 )
+Functions    : 100% ( 2/2 )
+Lines        : 100% ( 16/16 )
+================================================================================

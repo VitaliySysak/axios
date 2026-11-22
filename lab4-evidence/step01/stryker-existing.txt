@@ -1,0 +1,40 @@
+﻿[32m15:16:53 (20816) INFO ProjectReader[39m No incremental result file found at lab4-evidence/step01/mutation-existing/stryker-incremental.json, a full mutation testing run will be performed.
+[32m15:16:53 (20816) INFO ProjectReader[39m Found 1 of 576 file(s) to be mutated.
+[32m15:16:53 (20816) INFO Instrumenter[39m Instrumented 1 source file(s) with 43 mutant(s)
+[32m15:16:53 (20816) INFO ConcurrencyTokenProvider[39m Creating 4 test runner process(es).
+[32m15:16:54 (20816) INFO BroadcastReporter[39m Detected that current console does not support the "progress" reporter, downgrading to "progress-append-only" reporter
+[32m15:16:54 (20816) INFO DryRunExecutor[39m Starting initial test run (command test runner with "off" coverage analysis). This may take a while.
+[32m15:16:55 (20816) INFO DryRunExecutor[39m Initial test run succeeded. Ran 1 tests in 1 second (net 1446 ms, overhead 0 ms).
+Mutation testing 55% (elapsed: <1m, remaining: <1m) 24/43 tested (2 survived, 0 timed out)
+
+All tests
+  ✓ All tests (killed 40)
+
+[Survived] ConditionalExpression
+lib/helpers/buildURL.js:32:7
+-     if (!params) {
++     if (false) {
+
+[Survived] BlockStatement
+lib/helpers/buildURL.js:32:16
+-     if (!params) {
+-       return url;
+-     }
++     if (!params) {}
+
+[Survived] ConditionalExpression
+lib/helpers/buildURL.js:59:7
+-     if (serializedParams) {
++     if (true) {
+
+Ran 1.00 tests per mutant on average.
+-------------|------------------|----------|-----------|------------|----------|----------|
+             | % Mutation score |          |           |            |          |          |
+File         |  total | covered | # killed | # timeout | # survived | # no cov | # errors |
+-------------|--------|---------|----------|-----------|------------|----------|----------|
+All files    |  93.02 |   93.02 |       40 |         0 |          3 |        0 |        0 |
+ buildURL.js |  93.02 |   93.02 |       40 |         0 |          3 |        0 |        0 |
+-------------|--------|---------|----------|-----------|------------|----------|----------|
+[32m15:17:13 (20816) INFO JsonReporter[39m Your report can be found at: file:///C:/Users/User/Desktop/ITStep/axios/lab4-evidence/step01/mutation-existing/mutation.json
+[32m15:17:13 (20816) INFO HtmlReporter[39m Your report can be found at: file:///C:/Users/User/Desktop/ITStep/axios/lab4-evidence/step01/mutation-existing/mutation.html
+[32m15:17:13 (20816) INFO MutationTestExecutor[39m Done in 20 seconds.

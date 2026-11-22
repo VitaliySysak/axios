@@ -1,0 +1,34 @@
+npm error code ERESOLVE
+npm error ERESOLVE could not resolve
+npm error
+npm error While resolving: axios@1.21.1
+npm error Found: vitest@5.1.0
+npm error node_modules/vitest
+npm error   peer vitest@"5.1.0" from @vitest/browser@5.1.0
+npm error   node_modules/@vitest/browser
+npm error     @vitest/browser@"5.1.0" from @vitest/browser-playwright@5.1.0
+npm error     node_modules/@vitest/browser-playwright
+npm error       peerOptional @vitest/browser-playwright@"5.1.0" from vitest@5.1.0
+npm error       1 more (the root project)
+npm error     dev @vitest/browser@"^5.0.5" from the root project
+npm error   peer vitest@"5.1.0" from @vitest/browser-playwright@5.1.0
+npm error   node_modules/@vitest/browser-playwright
+npm error     peerOptional @vitest/browser-playwright@"5.1.0" from vitest@5.1.0
+npm error     dev @vitest/browser-playwright@"^5.0.5" from the root project
+npm error   2 more (@vitest/ui, the root project)
+npm error
+npm error Could not resolve dependency:
+npm error @vitest/coverage-v8@"5.0.5" from the root project
+npm error
+npm error Conflicting peer dependency: vitest@5.0.5
+npm error node_modules/vitest
+npm error   peer vitest@"5.0.5" from @vitest/coverage-v8@5.0.5
+npm error   node_modules/@vitest/coverage-v8
+npm error     @vitest/coverage-v8@"5.0.5" from the root project
+npm error
+npm error Fix the upstream dependency conflict, or retry this command with --force or --legacy-peer-deps to accept an incorrect (and potentially broken) dependency resolution.
+npm error
+npm error
+npm error For a full report see:
+npm error C:\Users\User\AppData\Local\npm-cache\_logs\2026-11-22T13_09_02_583Z-eresolve-report.txt
+npm error A complete log of this run can be found in: C:\Users\User\AppData\Local\npm-cache\_logs\2026-11-22T13_09_02_583Z-debug-0.log

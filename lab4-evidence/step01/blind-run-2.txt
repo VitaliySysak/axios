@@ -1,0 +1,9 @@
+
+ RUN  v5.1.0 C:/Users/User/Desktop/ITStep/axios
+
+
+ Test Files  1 passed (1)
+      Tests  8 passed (8)
+   Start at  15:07:37
+   Duration  367ms (import 52%, transform 44%, tests 2%, worker 2%)
+

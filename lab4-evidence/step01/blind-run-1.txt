@@ -1,0 +1,153 @@
+
+ RUN  v5.1.0 C:/Users/User/Desktop/ITStep/axios
+
+ ❯ |unit| tests/unit/helpers/buildURL.characterization.test.js (8 tests | 8 failed) 12ms
+   ❯ buildURL — поточна поведінка (характеризація) (8)
+     × порожній обʼєкт params лишає URL разом із #фрагментом 6ms
+     × params, де всі значення null/undefined, лишає URL разом із #фрагментом 1ms
+     × params = null повертає url як є, навіть якщо url не рядок 1ms
+     × серіалізатор, що повернув порожній рядок, лишає URL разом із #фрагментом 0ms
+     × функція в options стає серіалізатором і отримує { serialize } другим аргументом 1ms
+     × URL-обʼєкт замість рядка з непорожніми params 1ms
+     × axios.getUri з порожніми params лишає #фрагмент 1ms
+     × axios.getUri з непорожніми params відрізає #фрагмент 1ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 8 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  |unit| tests/unit/helpers/buildURL.characterization.test.js > buildURL — поточна поведінка (характеризація) > порожній обʼєкт params лишає URL разом із #фрагментом
+AssertionError: expected '/foo?foo=bar#hash' to deeply equal '?'
+
+Expected: "?"
+Received: "/foo?foo=bar#hash"
+
+ ❯ tests/unit/helpers/buildURL.characterization.test.js:14:47
+     12| describe('buildURL — поточна поведінка (характеризація)', () => {
+     13|   it('порожній обʼєкт params лишає URL разом із #фрагментом', () => {
+     14|     expect(buildURL('/foo?foo=bar#hash', {})).toEqual('?');
+       |                                               ^
+     15|   });
+     16|
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/8]⎯
+
+ FAIL  |unit| tests/unit/helpers/buildURL.characterization.test.js > buildURL — поточна поведінка (характеризація) > params, де всі значення null/undefined, лишає URL разом із #фрагментом
+AssertionError: expected '/foo?foo=bar#hash' to deeply equal '?'
+
+Expected: "?"
+Received: "/foo?foo=bar#hash"
+
+ ❯ tests/unit/helpers/buildURL.characterization.test.js:18:85
+     16|
+     17|   it('params, де всі значення null/undefined, лишає URL разом із #фраг…
+     18|     expect(buildURL('/foo?foo=bar#hash', { isUndefined: undefined, isN…
+       |                                                                                     ^
+     19|   });
+     20|
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/8]⎯
+
+ FAIL  |unit| tests/unit/helpers/buildURL.characterization.test.js > buildURL — поточна поведінка (характеризація) > params = null повертає url як є, навіть якщо url не рядок
+AssertionError: expected 42 to deeply equal '?'
+
+- Expected:
+"?"
+
++ Received:
+42
+
+ ❯ tests/unit/helpers/buildURL.characterization.test.js:22:32
+     20|
+     21|   it('params = null повертає url як є, навіть якщо url не рядок', () =…
+     22|     expect(buildURL(42, null)).toEqual('?');
+       |                                ^
+     23|   });
+     24|
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[3/8]⎯
+
+ FAIL  |unit| tests/unit/helpers/buildURL.characterization.test.js > buildURL — поточна поведінка (характеризація) > серіалізатор, що повернув порожній рядок, лишає URL разом із #фрагментом
+AssertionError: expected '/foo#hash' to deeply equal '?'
+
+Expected: "?"
+Received: "/foo#hash"
+
+ ❯ tests/unit/helpers/buildURL.characterization.test.js:26:61
+     24|
+     25|   it('серіалізатор, що повернув порожній рядок, лишає URL разом із #фр…
+     26|     expect(buildURL('/foo#hash', { foo: 'bar' }, () => '')).toEqual('?…
+       |                                                             ^
+     27|   });
+     28|
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[4/8]⎯
+
+ FAIL  |unit| tests/unit/helpers/buildURL.characterization.test.js > buildURL — поточна поведінка (характеризація) > функція в options стає серіалізатором і отримує { serialize } другим аргументом
+AssertionError: expected '/foo?x=1' to deeply equal '?'
+
+Expected: "?"
+Received: "/foo?x=1"
+
+ ❯ tests/unit/helpers/buildURL.characterization.test.js:35:58
+     33|       return 'x=1';
+     34|     };
+     35|     expect(buildURL('/foo', { foo: 'bar' }, serializer)).toEqual('?');
+       |                                                          ^
+     36|     expect(seen).toEqual('?');
+     37|   });
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[5/8]⎯
+
+ FAIL  |unit| tests/unit/helpers/buildURL.characterization.test.js > buildURL — поточна поведінка (характеризація) > URL-обʼєкт замість рядка з непорожніми params
+AssertionError: expected [Function] to throw error including '?' but got 'url.indexOf is not a function'
+
+Expected: "?"
+Received: "url.indexOf is not a function"
+
+ ❯ tests/unit/helpers/buildURL.characterization.test.js:40:77
+     38|
+     39|   it('URL-обʼєкт замість рядка з непорожніми params', () => {
+     40|     expect(() => buildURL(new URL('http://localhost/foo'), { foo: 'bar…
+       |                                                                             ^
+     41|   });
+     42|
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[6/8]⎯
+
+ FAIL  |unit| tests/unit/helpers/buildURL.characterization.test.js > buildURL — поточна поведінка (характеризація) > axios.getUri з порожніми params лишає #фрагмент
+AssertionError: expected '/foo#hash' to deeply equal '?'
+
+Expected: "?"
+Received: "/foo#hash"
+
+ ❯ tests/unit/helpers/buildURL.characterization.test.js:44:60
+     42|
+     43|   it('axios.getUri з порожніми params лишає #фрагмент', () => {
+     44|     expect(axios.getUri({ url: '/foo#hash', params: {} })).toEqual('?'…
+       |                                                            ^
+     45|   });
+     46|
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[7/8]⎯
+
+ FAIL  |unit| tests/unit/helpers/buildURL.characterization.test.js > buildURL — поточна поведінка (характеризація) > axios.getUri з непорожніми params відрізає #фрагмент
+AssertionError: expected '/foo?query=axios&page=1' to deeply equal '?'
+
+Expected: "?"
+Received: "/foo?query=axios&page=1"
+
+ ❯ tests/unit/helpers/buildURL.characterization.test.js:48:85
+     46|
+     47|   it('axios.getUri з непорожніми params відрізає #фрагмент', () => {
+     48|     expect(axios.getUri({ url: '/foo#hash', params: { query: 'axios', …
+       |                                                                                     ^
+     49|   });
+     50| });
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[8/8]⎯
+
+
+ Test Files  1 failed (1)
+      Tests  8 failed (8)
+   Start at  15:07:17
+   Duration  411ms (import 52%, transform 41%, tests 5%, worker 2%)
+

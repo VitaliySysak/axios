@@ -1,0 +1,41 @@
+﻿[32m15:12:29 (9168) INFO ProjectReader[39m No incremental result file found at lab4-evidence/step01/mutation-existing/stryker-incremental.json, a full mutation testing run will be performed.
+[32m15:12:29 (9168) INFO ProjectReader[39m Found 1 of 572 file(s) to be mutated.
+[32m15:12:29 (9168) INFO Instrumenter[39m Instrumented 1 source file(s) with 43 mutant(s)
+[91m15:12:29 (9168) ERROR Stryker[39m Unexpected error occurred while running Stryker TypeError: ts.parseConfigFileTextToJson is not a function
+    at TSConfigPreprocessor.rewriteTSConfigFile (file:///C:/Users/User/Desktop/ITStep/axios/node_modules/@stryker-mutator/core/dist/src/sandbox/ts-config-preprocessor.js:46:39)
+    at async TSConfigPreprocessor.preprocess (file:///C:/Users/User/Desktop/ITStep/axios/node_modules/@stryker-mutator/core/dist/src/sandbox/ts-config-preprocessor.js:36:13)
+    at async MultiPreprocessor.preprocess (file:///C:/Users/User/Desktop/ITStep/axios/node_modules/@stryker-mutator/core/dist/src/sandbox/multi-preprocessor.js:8:13)
+    at async MutantInstrumenterExecutor.execute (file:///C:/Users/User/Desktop/ITStep/axios/node_modules/@stryker-mutator/core/dist/src/process/2-mutant-instrumenter-executor.js:30:9)
+    at async Stryker.run (file:///C:/Users/User/Desktop/ITStep/axios/node_modules/@stryker-mutator/core/dist/src/stryker.js:49:48)
+    at async Stryker.runMutationTest (file:///C:/Users/User/Desktop/ITStep/axios/node_modules/@stryker-mutator/core/dist/src/stryker.js:27:20)
+    at async Command.<anonymous> (file:///C:/Users/User/Desktop/ITStep/axios/node_modules/@stryker-mutator/core/dist/src/stryker-cli.js:51:13)
+[32m15:12:29 (9168) INFO Stryker[39m This might be a known problem with a solution documented in our troubleshooting guide.
+[32m15:12:29 (9168) INFO Stryker[39m You can find it at https://stryker-mutator.io/docs/stryker-js/troubleshooting/
+[32m15:12:29 (9168) INFO Stryker[39m Still having trouble figuring out what went wrong? Try `npx stryker run --fileLogLevel trace --logLevel debug` to get some more info.
+node.exe : node:internal/process/promises:394
+At line:1 char:1
++ & "C:\Program Files\nodejs/node.exe" "C:\Program Files\nodejs/node_mo ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (node:internal/process/promises:394:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+    triggerUncaughtException(err, true /* fromPromise */);
+    ^
+
+TypeError: ts.parseConfigFileTextToJson is not a function
+    at TSConfigPreprocessor.rewriteTSConfigFile (file:///C:/Users/User/Desktop/ITStep/axios/node_modules/@stryker-mutat
+or/core/dist/src/sandbox/ts-config-preprocessor.js:46:39)
+    at async TSConfigPreprocessor.preprocess (file:///C:/Users/User/Desktop/ITStep/axios/node_modules/@stryker-mutator/
+core/dist/src/sandbox/ts-config-preprocessor.js:36:13)
+    at async MultiPreprocessor.preprocess (file:///C:/Users/User/Desktop/ITStep/axios/node_modules/@stryker-mutator/cor
+e/dist/src/sandbox/multi-preprocessor.js:8:13)
+    at async MutantInstrumenterExecutor.execute (file:///C:/Users/User/Desktop/ITStep/axios/node_modules/@stryker-mutat
+or/core/dist/src/process/2-mutant-instrumenter-executor.js:30:9)
+    at async Stryker.run 
+(file:///C:/Users/User/Desktop/ITStep/axios/node_modules/@stryker-mutator/core/dist/src/stryker.js:49:48)
+    at async Stryker.runMutationTest 
+(file:///C:/Users/User/Desktop/ITStep/axios/node_modules/@stryker-mutator/core/dist/src/stryker.js:27:20)
+    at async Command.<anonymous> 
+(file:///C:/Users/User/Desktop/ITStep/axios/node_modules/@stryker-mutator/core/dist/src/stryker-cli.js:51:13)
+
+Node.js v24.21.0

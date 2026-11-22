@@ -1,0 +1,34 @@
+
+ RUN  v5.1.0 C:/Users/User/Desktop/ITStep/axios
+
+ ❯ |unit| tests/unit/helpers/buildURL.characterization.test.js (8 tests | 1 failed) 10ms
+   ❯ buildURL — поточна поведінка (характеризація) (8)
+     × params = null повертає url як є, навіть якщо url не рядок 4ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  |unit| tests/unit/helpers/buildURL.characterization.test.js > buildURL — поточна поведінка (характеризація) > params = null повертає url як є, навіть якщо url не рядок
+AssertionError: expected undefined to be '?' // Object.is equality
+
+- Expected:
+"?"
+
++ Received:
+undefined
+
+ ❯ tests/unit/helpers/buildURL.characterization.test.js:33:39
+     31|   it('params = null повертає url як є, навіть якщо url не рядок', () =…
+     32|     expect(buildURL(42, null)).toBe(42);
+     33|     expect(buildURL(undefined, null)).toBe('?');
+       |                                       ^
+     34|   });
+     35|
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 7 passed (8)
+   Start at  15:17:52
+   Duration  549ms (transform 64%, import 32%, tests 2%, worker 1%)
+

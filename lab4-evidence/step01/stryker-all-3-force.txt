@@ -1,0 +1,26 @@
+﻿[32m15:18:18 (6536) INFO ProjectReader[39m Found 1 of 582 file(s) to be mutated using incremental report with 43 mutant(s), and 1 test(s). Force mode is activated, all mutants will be retested.
+[32m15:18:18 (6536) INFO Instrumenter[39m Instrumented 1 source file(s) with 43 mutant(s)
+[32m15:18:18 (6536) INFO ConcurrencyTokenProvider[39m Creating 4 test runner process(es).
+[32m15:18:19 (6536) INFO BroadcastReporter[39m Detected that current console does not support the "progress" reporter, downgrading to "progress-append-only" reporter
+[32m15:18:19 (6536) INFO DryRunExecutor[39m Starting initial test run (command test runner with "off" coverage analysis). This may take a while.
+[32m15:18:21 (6536) INFO DryRunExecutor[39m Initial test run succeeded. Ran 1 tests in 1 second (net 1787 ms, overhead 1 ms).
+[32m15:18:21 (6536) INFO IncrementalDiffer[39m Incremental report:
+	Mutants:	0 files changed (+0 -0)
+	Result:		0 of 43 mutant result(s) are reused.
+Mutation testing 46% (elapsed: <1m, remaining: <1m) 20/43 tested (0 survived, 0 timed out)
+Mutation testing 93% (elapsed: <1m, remaining: <1m) 40/43 tested (0 survived, 0 timed out)
+
+All tests
+  ✓ All tests (killed 43)
+
+Ran 1.00 tests per mutant on average.
+-------------|------------------|----------|-----------|------------|----------|----------|
+             | % Mutation score |          |           |            |          |          |
+File         |  total | covered | # killed | # timeout | # survived | # no cov | # errors |
+-------------|--------|---------|----------|-----------|------------|----------|----------|
+All files    | 100.00 |  100.00 |       43 |         0 |          0 |        0 |        0 |
+ buildURL.js | 100.00 |  100.00 |       43 |         0 |          0 |        0 |        0 |
+-------------|--------|---------|----------|-----------|------------|----------|----------|
+[32m15:18:41 (6536) INFO JsonReporter[39m Your report can be found at: file:///C:/Users/User/Desktop/ITStep/axios/lab4-evidence/step01/mutation-all/mutation.json
+[32m15:18:41 (6536) INFO HtmlReporter[39m Your report can be found at: file:///C:/Users/User/Desktop/ITStep/axios/lab4-evidence/step01/mutation-all/mutation.html
+[32m15:18:41 (6536) INFO MutationTestExecutor[39m Done in 23 seconds.
