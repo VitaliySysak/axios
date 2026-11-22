@@ -1,0 +1,22 @@
+﻿
+> axios@1.21.1 test:vitest:unit
+> vitest run --project unit
+
+
+ RUN  v5.1.0 C:/Users/User/Desktop/ITStep/change-tree
+
+node.exe : (node:15756) Warning: Setting the NODE_TLS_REJECT_UNAUTHORIZED environment variable to '0' makes TLS 
+connections and HTTPS requests insecure by disabling certificate verification.
+At line:1 char:1
++ & "C:\Program Files\nodejs/node.exe" "C:\Program Files\nodejs/node_mo ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: ((node:15756) Wa...e verification.:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+ Test Files  79 passed (79)
+      Tests  1811 passed (1811)
+   Start at  15:59:41
+   Duration  68.55s (tests 87%, import 11%, transform 2%)
+

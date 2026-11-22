@@ -1,0 +1,14 @@
+Зміни ЛИШЕ lib/core/Axios.js, метод getUri (близько рядків 316–323).
+
+Зараз axios.getUri() кидає голий TypeError, коли buildURL падає на невалідному url (наприклад, URL-обʼєкт замість рядка).
+Треба: обгорнути лише виклик buildURL у getUri в try/catch так, щоб
+  - помилка, яка ВЖЕ є AxiosError (наприклад, ERR_FORM_DATA_DEPTH_EXCEEDED від серіалізатора параметрів), пролітала далі БЕЗ змін — той самий обʼєкт і той самий code;
+  - будь-яка інша помилка (TypeError тощо) перетворювалась на AxiosError.from(err, AxiosError.ERR_BAD_REQUEST, config).
+Попередня спроба загортала всі помилки й ламала tests/unit/core/paramsMerge.test.js
+('retains default and lowered serializer depth limits' чекає code === 'ERR_FORM_DATA_DEPTH_EXCEEDED').
+Щоб розпізнати AxiosError, використай наявний у проєкті спосіб (наприклад, lib/helpers/isAxiosError.js або instanceof AxiosError) — не вигадуй нового.
+Не змінюй нічого іншого: ні успішний шлях, ні інші методи, ні тести, ні інші файли.
+
+Після зміни запусти:
+  npx vitest run --project unit tests/unit/core/getUri.badRequest.test.js tests/unit/helpers/buildURL.characterization.test.js tests/unit/api.test.js tests/unit/core/paramsMerge.test.js
+і покажи git diff. Тести не редагуй — якщо тест червоний, опиши чому, але не змінюй його.

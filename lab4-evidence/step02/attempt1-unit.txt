@@ -1,0 +1,127 @@
+﻿
+> axios@1.21.1 test:vitest:unit
+> vitest run --project unit
+
+
+ RUN  v5.1.0 C:/Users/User/Desktop/ITStep/change-tree
+
+ ❯ |unit| tests/unit/core/paramsMerge.test.js (28 tests | 1 failed) 77ms
+   ❯ params serializer depth settings (5)
+     × retains default and lowered serializer depth limits 27ms
+node.exe : (node:20612) Warning: Setting the NODE_TLS_REJECT_UNAUTHORIZED environment variable to '0' makes TLS 
+connections and HTTPS requests insecure by disabling certificate verification.
+At line:1 char:1
++ & "C:\Program Files\nodejs/node.exe" "C:\Program Files\nodejs/node_mo ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: ((node:20612) Wa...e verification.:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  |unit| tests/unit/core/paramsMerge.test.js > params serializer depth settings > retains default and lowered 
+serializer depth limits
+AssertionError: The validation function is expected to return "true". Received false
+
+Caught error:
+
+AxiosError: Object is too deeply nested (101 levels). Max depth: 100
+
+- Expected:
+[Function anonymous]
+
++ Received:
+AxiosError {
+  "message": "Object is too deeply nested (101 levels). Max depth: 100",
+  "cause": AxiosError {
+    "message": "Object is too deeply nested (101 levels). Max depth: 100",
+    "name": "AxiosError",
+    "isAxiosError": true,
+    "code": "ERR_FORM_DATA_DEPTH_EXCEEDED",
+  },
+  "name": "AxiosError",
+  "isAxiosError": true,
+  "code": "ERR_BAD_REQUEST",
+  "config": {
+    "adapter": [
+      "xhr",
+      "http",
+      "fetch",
+    ],
+    "env": {
+      "Blob": [Function Blob],
+      "FormData": [Function FormData],
+    },
+    "headers": {
+      "common": {
+        "Accept": "application/json, text/plain, */*",
+        "Content-Type": undefined,
+      },
+      "delete": {},
+      "get": {},
+      "head": {},
+      "link": {},
+      "options": {},
+      "patch": {},
+      "post": {},
+      "purge": {},
+      "put": {},
+      "query": {},
+      "unlink": {},
+    },
+    "maxBodyLength": -1,
+    "maxContentLength": -1,
+    "params": {
+      "next": {
+        "next": {
+          "next": {
+            "next": {
+              "next": {
+                "next": [Object],
+              },
+            },
+          },
+        },
+      },
+    },
+    "timeout": 0,
+    "transformRequest": [
+      [Function transformRequest],
+    ],
+    "transformResponse": [
+      [Function transformResponse],
+    ],
+    "transitional": {
+      "advertiseZstdAcceptEncoding": false,
+      "clarifyTimeoutError": false,
+      "encodeBasicAuthUsername": false,
+      "forcedJSONParsing": true,
+      "legacyInterceptorReqResOrdering": true,
+      "silentJSONParsing": true,
+      "validateStatusUndefinedResolves": true,
+    },
+    "url": "/resource",
+    "validateStatus": [Function validateStatus],
+    "xsrfCookieName": "XSRF-TOKEN",
+    "xsrfHeaderName": "X-XSRF-TOKEN",
+  },
+}
+
+ ❯ tests/unit/core/paramsMerge.test.js:299:14
+    297|   it('retains default and lowered serializer depth limits', function (…
+    298|     [undefined, { maxDepth: 5 }].forEach(function (paramsSerializer) {
+    299|       assert.throws(
+       |              ^
+    300|         () => axios.getUri({ url: '/resource', params: nest(150), para…
+    301|         (error) => error.code === 'ERR_FORM_DATA_DEPTH_EXCEEDED'
+ ❯ tests/unit/core/paramsMerge.test.js:298:34
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+ Test Files  1 failed | 78 passed (79)
+      Tests  1 failed | 1810 passed (1811)
+   Start at  15:57:26
+   Duration  68.85s (tests 85%, import 12%, transform 3%)
+

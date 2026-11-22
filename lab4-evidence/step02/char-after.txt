@@ -1,0 +1,9 @@
+﻿
+ RUN  v5.1.0 C:/Users/User/Desktop/ITStep/change-tree
+
+
+ Test Files  1 passed (1)
+      Tests  8 passed (8)
+   Start at  16:00:51
+   Duration  383ms (import 50%, transform 46%, tests 2%, worker 2%)
+

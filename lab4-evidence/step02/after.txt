@@ -1,0 +1,3 @@
+URL-обʼєкт (#10866): кидає AxiosError isAxiosError=true code=ERR_BAD_REQUEST message="url.indexOf is not a function" cause=TypeError
+глибина 150 (paramsMerge.test.js): кидає AxiosError isAxiosError=true code=ERR_FORM_DATA_DEPTH_EXCEEDED message="Object is too deeply nested (101 levels). Max depth: 100" cause=undefined
+приклад README: повертає "/foo?query=axios&page=1"

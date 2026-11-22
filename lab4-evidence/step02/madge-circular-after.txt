@@ -1,0 +1,11 @@
+﻿node.exe : - Finding files
+At line:1 char:1
++ & "C:\Program Files\nodejs/node.exe" "C:\Program Files\nodejs/node_mo ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (- Finding files:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+Processed 73 files (750ms) 
+
+√ No circular dependency found!
+

@@ -1,0 +1,76 @@
+﻿
+ RUN  v5.1.0 C:/Users/User/Desktop/ITStep/change-tree
+
+ ❯ |unit| tests/unit/core/getUri.badRequest.test.js (3 tests | 3 failed) 9ms
+   ❯ axios.getUri — url, на якому падає buildURL (3)
+     × кидає AxiosError, а не голий TypeError 7ms
+     × має код ERR_BAD_REQUEST, як Node-адаптер для того самого збою 1ms
+     × зберігає вихідний TypeError у cause 1ms
+node.exe : 
+At line:1 char:1
++ & "C:\Program Files\nodejs/node.exe" "C:\Program Files\nodejs/node_mo ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 3 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  |unit| tests/unit/core/getUri.badRequest.test.js > axios.getUri — url, на якому падає buildURL > кидає 
+AxiosError, а не голий TypeError
+AssertionError: expected false to be true // Object.is equality
+
+- Expected
++ Received
+
+- true
++ false
+
+ ❯ tests/unit/core/getUri.badRequest.test.js:27:39
+     25|   it('кидає AxiosError, а не голий TypeError', () => {
+     26|     const error = thrownBy(() => axios.getUri(config));
+     27|     expect(axios.isAxiosError(error)).toBe(true);
+       |                                       ^
+     28|     expect(error).toBeInstanceOf(AxiosError);
+     29|   });
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/3]⎯
+
+ FAIL  |unit| tests/unit/core/getUri.badRequest.test.js > axios.getUri — url, на якому падає buildURL > має код 
+ERR_BAD_REQUEST, як Node-адаптер для того самого збою
+AssertionError: expected undefined to be 'ERR_BAD_REQUEST' // Object.is equality
+
+- Expected:
+"ERR_BAD_REQUEST"
+
++ Received:
+undefined
+
+ ❯ tests/unit/core/getUri.badRequest.test.js:33:25
+     31|   it('має код ERR_BAD_REQUEST, як Node-адаптер для того самого збою', …
+     32|     const error = thrownBy(() => axios.getUri(config));
+     33|     expect(error?.code).toBe(AxiosError.ERR_BAD_REQUEST);
+       |                         ^
+     34|   });
+     35|
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/3]⎯
+
+ FAIL  |unit| tests/unit/core/getUri.badRequest.test.js > axios.getUri — url, на якому падає buildURL > зберігає 
+вихідний TypeError у cause
+AssertionError: expected undefined to be an instance of TypeError
+ ❯ tests/unit/core/getUri.badRequest.test.js:38:26
+     36|   it('зберігає вихідний TypeError у cause', () => {
+     37|     const error = thrownBy(() => axios.getUri(config));
+     38|     expect(error?.cause).toBeInstanceOf(TypeError);
+       |                          ^
+     39|     expect(error?.cause?.message).toBe('url.indexOf is not a function'…
+     40|   });
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[3/3]⎯
+
+
+ Test Files  1 failed (1)
+      Tests  3 failed (3)
+   Start at  16:02:24
+   Duration  407ms (import 50%, transform 45%, tests 3%, worker 2%)
+

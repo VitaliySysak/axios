@@ -1,0 +1,12 @@
+Зміни ЛИШЕ lib/core/Axios.js, метод getUri (близько рядків 316–323).
+
+Зараз axios.getUri() кидає голий TypeError, коли buildURL падає на невалідному url (наприклад, URL-обʼєкт замість рядка).
+Node-адаптер для того самого збою вже робить інакше — подивись lib/adapters/http.js рядки 1012–1028: виклик buildURL обгорнуто
+в try/catch, і помилка перетворюється на AxiosError.from(err, AxiosError.ERR_BAD_REQUEST, config, ...).
+
+Зроби в getUri те саме: обгорни лише виклик buildURL у try/catch і кидай AxiosError.from(err, AxiosError.ERR_BAD_REQUEST, config).
+Не змінюй нічого іншого: ні успішний шлях, ні інші методи, ні тести, ні інші файли. AxiosError у Axios.js уже може бути імпортований — перевір.
+
+Після зміни запусти:
+  npx vitest run --project unit tests/unit/core/getUri.badRequest.test.js tests/unit/helpers/buildURL.characterization.test.js tests/unit/api.test.js
+і покажи git diff. Тести не редагуй — якщо тест червоний, опиши чому, але не змінюй його.

@@ -1,0 +1,26 @@
+diff --git a/lib/core/Axios.js b/lib/core/Axios.js
+index 83f56bca..ecfbb06d 100644
+--- a/lib/core/Axios.js
++++ b/lib/core/Axios.js
+@@ -13,7 +13,7 @@ import methodList from './methodList.js';
+ import validator from '../helpers/validator.js';
+ import AxiosHeaders from './AxiosHeaders.js';
+ import transitionalDefaults from '../defaults/transitional.js';
+-import { getCauseStackIndex } from './AxiosError.js';
++import AxiosError, { getCauseStackIndex } from './AxiosError.js';
+ 
+ const validators = validator.validators;
+ 
+@@ -319,7 +319,11 @@ class Axios {
+       adapters.getAdapter(config.adapter || defaults.adapter, config)
+     );
+     const fullPath = buildFullPath(config.baseURL, config.url, config.allowAbsoluteUrls, config);
+-    return buildURL(fullPath, config.params, config.paramsSerializer);
++    try {
++      return buildURL(fullPath, config.params, config.paramsSerializer);
++    } catch (err) {
++      throw AxiosError.from(err, AxiosError.ERR_BAD_REQUEST, config);
++    }
+   }
+ }
+ 
