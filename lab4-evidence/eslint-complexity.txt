@@ -1,0 +1,115 @@
+
+C:\Users\User\Desktop\ITStep\axios\lib\adapters\adapters.js
+  32:7  warning  Unused eslint-disable directive (no problems were reported from 'no-empty')
+  65:1  warning  Function 'getAdapter' has too many lines (51). Maximum allowed is 50         max-lines-per-function
+
+C:\Users\User\Desktop\ITStep\axios\lib\adapters\fetch.js
+  120:23  warning  Arrow function has too many lines (642). Maximum allowed is 50        max-lines-per-function
+  261:25  warning  Async arrow function has too many lines (500). Maximum allowed is 50  max-lines-per-function
+  261:25  warning  Async arrow function has a complexity of 134. Maximum allowed is 20   complexity
+
+C:\Users\User\Desktop\ITStep\axios\lib\adapters\http.js
+   149:1   warning  Function 'getDirectAgent' has too many lines (67). Maximum allowed is 50              max-lines-per-function
+   357:1   warning  Function 'setProxy' has too many lines (185). Maximum allowed is 50                   max-lines-per-function
+   357:1   warning  Function 'setProxy' has a complexity of 58. Maximum allowed is 20                     complexity
+   673:3   warning  Function 'httpAdapter' has too many lines (955). Maximum allowed is 50                max-lines-per-function
+   674:22  warning  Async function 'dispatchHttpRequest' has too many lines (953). Maximum allowed is 50  max-lines-per-function
+   674:22  warning  Async function 'dispatchHttpRequest' has a complexity of 109. Maximum allowed is 20   complexity
+  1280:40  warning  Function 'handleResponse' has too many lines (190). Maximum allowed is 50             max-lines-per-function
+  1280:40  warning  Function 'handleResponse' has a complexity of 23. Maximum allowed is 20               complexity
+
+C:\Users\User\Desktop\ITStep\axios\lib\adapters\xhr.js
+   18:3   warning  Function has too many lines (367). Maximum allowed is 50                       max-lines-per-function
+   19:24  warning  Function 'dispatchXhrRequest' has too many lines (365). Maximum allowed is 50  max-lines-per-function
+   19:24  warning  Function 'dispatchXhrRequest' has a complexity of 28. Maximum allowed is 20    complexity
+   87:7   warning  Function 'onloadend' has too many lines (81). Maximum allowed is 50            max-lines-per-function
+  279:9   warning  Unused eslint-disable directive (no problems were reported from 'func-names')
+
+C:\Users\User\Desktop\ITStep\axios\lib\cancel\CancelToken.js
+  13:3  warning  Constructor has too many lines (51). Maximum allowed is 50                     max-lines-per-function
+  26:5  warning  Unused eslint-disable directive (no problems were reported from 'func-names')
+  38:5  warning  Unused eslint-disable directive (no problems were reported from 'func-names')
+  41:7  warning  Unused eslint-disable directive (no problems were reported from 'func-names')
+
+C:\Users\User\Desktop\ITStep\axios\lib\core\Axios.js
+   75:3  warning  Async method 'request' has too many lines (52). Maximum allowed is 50  max-lines-per-function
+  128:3  warning  Method '_request' has too many lines (187). Maximum allowed is 50      max-lines-per-function
+  128:3  warning  Method '_request' has a complexity of 27. Maximum allowed is 20        complexity
+
+C:\Users\User\Desktop\ITStep\axios\lib\core\AxiosHeaders.js
+   92:1  warning  Function 'parseParameters' has too many lines (58). Maximum allowed is 50  max-lines-per-function
+  216:3  warning  Method 'set' has too many lines (55). Maximum allowed is 50                max-lines-per-function
+
+C:\Users\User\Desktop\ITStep\axios\lib\core\dispatchRequest.js
+  67:16  warning  Function 'dispatchRequest' has too many lines (70). Maximum allowed is 50  max-lines-per-function
+
+C:\Users\User\Desktop\ITStep\axios\lib\core\mergeConfig.js
+   87:1  warning  Unused eslint-disable directive (no problems were reported from 'consistent-return')
+   94:1  warning  Unused eslint-disable directive (no problems were reported from 'consistent-return')
+  129:1  warning  Unused eslint-disable directive (no problems were reported from 'consistent-return')
+  200:3  warning  Unused eslint-disable directive (no problems were reported from 'no-param-reassign')
+
+C:\Users\User\Desktop\ITStep\axios\lib\defaults\index.js
+  45:5  warning  Function 'transformRequest' has too many lines (63). Maximum allowed is 50  max-lines-per-function
+  45:5  warning  Function 'transformRequest' has a complexity of 23. Maximum allowed is 20   complexity
+
+C:\Users\User\Desktop\ITStep\axios\lib\helpers\AxiosTransformStream.js
+  62:3   warning  Method '_transform' has too many lines (101). Maximum allowed is 50  max-lines-per-function
+  98:48  warning  Arrow function has too many lines (52). Maximum allowed is 50        max-lines-per-function
+
+C:\Users\User\Desktop\ITStep\axios\lib\helpers\Http2Sessions.js
+  16:3  warning  Method 'getSession' has too many lines (104). Maximum allowed is 50  max-lines-per-function
+
+C:\Users\User\Desktop\ITStep\axios\lib\helpers\composeSignals.js
+  5:43  warning  Arrow function has too many lines (65). Maximum allowed is 50  max-lines-per-function
+
+C:\Users\User\Desktop\ITStep\axios\lib\helpers\formDataToBlob.js
+  48:16  warning  Function 'formDataToBlob' has too many lines (66). Maximum allowed is 50  max-lines-per-function
+
+C:\Users\User\Desktop\ITStep\axios\lib\helpers\fromDataURI.js
+  24:16  warning  Function 'fromDataURI' has too many lines (52). Maximum allowed is 50  max-lines-per-function
+
+C:\Users\User\Desktop\ITStep\axios\lib\helpers\null.js
+  1:1  warning  Unused eslint-disable directive (no problems were reported from 'strict')
+
+C:\Users\User\Desktop\ITStep\axios\lib\helpers\resolveConfig.js
+  27:1  warning  Function 'resolveConfig' has too many lines (92). Maximum allowed is 50  max-lines-per-function
+  27:1  warning  Function 'resolveConfig' has a complexity of 23. Maximum allowed is 20   complexity
+
+C:\Users\User\Desktop\ITStep\axios\lib\helpers\sanitizeHeaderValue.js
+  33:1  warning  Unused eslint-disable directive (no problems were reported from 'no-control-regex')
+  35:1  warning  Unused eslint-disable directive (no problems were reported from 'no-control-regex')
+
+C:\Users\User\Desktop\ITStep\axios\lib\helpers\shouldBypassProxy.js
+   63:35  warning  Arrow function has too many lines (64). Maximum allowed is 50                max-lines-per-function
+  453:16  warning  Function 'shouldBypassProxy' has too many lines (68). Maximum allowed is 50  max-lines-per-function
+
+C:\Users\User\Desktop\ITStep\axios\lib\helpers\toFormData.js
+   49:7   warning  Unused eslint-disable directive (no problems were reported from 'no-param-reassign')
+   94:1   warning  Function 'toFormData' has too many lines (184). Maximum allowed is 50                    max-lines-per-function
+   99:3   warning  Unused eslint-disable directive (no problems were reported from 'no-param-reassign')
+  108:3   warning  Unused eslint-disable directive (no problems were reported from 'no-use-before-define')
+  204:9   warning  Unused eslint-disable directive (no problems were reported from 'no-param-reassign')
+  206:9   warning  Unused eslint-disable directive (no problems were reported from 'no-param-reassign')
+  212:9   warning  Unused eslint-disable directive (no problems were reported from 'no-param-reassign')
+  218:15  warning  Unused eslint-disable directive (no problems were reported from 'no-nested-ternary')
+
+C:\Users\User\Desktop\ITStep\axios\lib\helpers\validator.js
+   8:1  warning  Unused eslint-disable directive (no problems were reported from 'func-names')
+  39:3  warning  Unused eslint-disable directive (no problems were reported from 'func-names')
+  50:7  warning  Unused eslint-disable directive (no problems were reported from 'no-console')
+  65:5  warning  Unused eslint-disable directive (no problems were reported from 'no-console')
+
+C:\Users\User\Desktop\ITStep\axios\lib\platform\common\utils.js
+  38:5  warning  Unused eslint-disable directive (no problems were reported from 'no-undef')
+
+C:\Users\User\Desktop\ITStep\axios\lib\utils.js
+  132:34  warning  Arrow function has too many lines (51). Maximum allowed is 50                              max-lines-per-function
+  587:1   warning  Function 'merge' has too many lines (64). Maximum allowed is 50                            max-lines-per-function
+  747:3   warning  Unused eslint-disable directive (no problems were reported from 'no-eq-null' or 'eqeqeq')
+  842:1   warning  Unused eslint-disable directive (no problems were reported from 'func-names')
+  844:3   warning  Unused eslint-disable directive (no problems were reported from 'func-names')
+
+✖ 65 problems (0 errors, 65 warnings)
+  0 errors and 27 warnings potentially fixable with the `--fix` option.
+

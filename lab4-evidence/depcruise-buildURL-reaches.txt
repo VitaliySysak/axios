@@ -1,0 +1,17 @@
+index.js → lib/axios.js
+lib/axios.js → lib/adapters/adapters.js
+lib/axios.js → lib/core/Axios.js
+lib/adapters/adapters.js → lib/adapters/fetch.js
+lib/adapters/adapters.js → lib/adapters/http.js
+lib/adapters/adapters.js → lib/adapters/xhr.js
+lib/adapters/fetch.js → lib/helpers/resolveConfig.js
+lib/helpers/resolveConfig.js → lib/helpers/buildURL.js
+lib/adapters/http.js → lib/helpers/buildURL.js
+lib/adapters/xhr.js → lib/helpers/resolveConfig.js
+lib/core/Axios.js → lib/adapters/adapters.js
+lib/core/Axios.js → lib/helpers/buildURL.js
+lib/core/Axios.js → lib/core/assertValidRequestUrl.js
+lib/core/Axios.js → lib/core/dispatchRequest.js
+lib/core/assertValidRequestUrl.js → lib/adapters/adapters.js
+lib/core/dispatchRequest.js → lib/adapters/adapters.js
+lib/core/dispatchRequest.js → lib/core/assertValidRequestUrl.js

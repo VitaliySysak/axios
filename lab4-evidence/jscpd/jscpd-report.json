@@ -1,0 +1,83 @@
+{
+  "duplicates": [
+    {
+      "firstFile": {
+        "end": 68,
+        "endLoc": {
+          "column": 5,
+          "line": 68,
+          "position": 2403
+        },
+        "name": "helpers\\estimateDataURLDecodedBytes.js",
+        "start": 63,
+        "startLoc": {
+          "column": 35,
+          "line": 63,
+          "position": 2173
+        }
+      },
+      "format": "javascript",
+      "fragment": "  for (let i = 0, len = body.length; i < len; i++) {\n    let code = body.charCodeAt(i);\n    if (code === 37 /* '%' */ && isPercentEncodedByte(body, i, len)) {\n      code = hexValue(body.charCodeAt(i + 1)) * 16 + hexValue(body.charCodeAt(i + 2));\n      i += 2;\n    }",
+      "isNew": false,
+      "kind": "exact",
+      "lines": 6,
+      "secondFile": {
+        "end": 90,
+        "endLoc": {
+          "column": 5,
+          "line": 90,
+          "position": 2973
+        },
+        "name": "helpers\\estimateDataURLDecodedBytes.js",
+        "start": 84,
+        "startLoc": {
+          "column": 16,
+          "line": 84,
+          "position": 2742
+        }
+      },
+      "tokens": 68
+    }
+  ],
+  "statistics": {
+    "detectionDate": "2026-11-22T12:56:08.730Z",
+    "formats": {
+      "javascript": {
+        "clones": 1,
+        "duplicatedLines": 6,
+        "duplicatedTokens": 68,
+        "lines": 9615,
+        "newClones": 0,
+        "newDuplicatedLines": 0,
+        "percentage": 0.062402496099843996,
+        "percentageTokens": 0.16643414837114814,
+        "sources": 56,
+        "tokens": 40857
+      },
+      "markdown": {
+        "clones": 0,
+        "duplicatedLines": 0,
+        "duplicatedTokens": 0,
+        "lines": 50,
+        "newClones": 0,
+        "newDuplicatedLines": 0,
+        "percentage": 0.0,
+        "percentageTokens": 0.0,
+        "sources": 3,
+        "tokens": 271
+      }
+    },
+    "total": {
+      "clones": 1,
+      "duplicatedLines": 6,
+      "duplicatedTokens": 68,
+      "lines": 9665,
+      "newClones": 0,
+      "newDuplicatedLines": 0,
+      "percentage": 0.06207966890843249,
+      "percentageTokens": 0.16533748297996498,
+      "sources": 59,
+      "tokens": 41128
+    }
+  }
+}

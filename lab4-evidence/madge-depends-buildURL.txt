@@ -1,0 +1,7 @@
+- Finding files
+Processed 73 files (740ms) 
+
+adapters/http.js
+core/Axios.js
+helpers/resolveConfig.js
+

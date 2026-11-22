@@ -1,0 +1,8 @@
+lib/helpers/resolveConfig.js → lib/utils.js
+lib/helpers/resolveConfig.js → lib/helpers/buildURL.js
+lib/helpers/buildURL.js → lib/utils.js
+lib/helpers/buildURL.js → lib/helpers/AxiosURLSearchParams.js
+lib/adapters/http.js → lib/helpers/buildURL.js
+lib/adapters/http.js → lib/utils.js
+lib/core/Axios.js → lib/helpers/buildURL.js
+lib/core/Axios.js → lib/utils.js
